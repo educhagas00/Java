@@ -18,6 +18,4 @@ public class Nota {
 		this.date = date;
 	}
 	
-	
-
 }

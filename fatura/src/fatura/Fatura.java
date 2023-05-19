@@ -1,10 +1,17 @@
 package fatura;
+import java.util.ArrayList;
 
 public class Fatura {
 	
 	private String nome;
 	private String cpf;
-	private Item[] itens;
+	private ArrayList<Item> itens;
+	
+	public Fatura(String nome, String cpf) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.itens = new ArrayList<Item>(); 
+	}
 	
 	public String getNome() {
 		return nome;
@@ -21,16 +28,17 @@ public class Fatura {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	public Item[] getItens() {
-		return itens;
-	}
-	
-	public void setItens(Item[] itens) {
-		this.itens = itens;
+
+	public void addItem(Item item) {
+		itens.add(item);
 	}
 	
 	public double obtemPreco() {
+		double precoFinal = 0;
+		for (Item item : itens) {
+			precoFinal += item.getPreco_unitario() * item.getQuantidade();
+		}
 		
+	return precoFinal; 
 	}
 }

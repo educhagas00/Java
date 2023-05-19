@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author EDUARDO
- *
- */
-module sacanagem {
-}

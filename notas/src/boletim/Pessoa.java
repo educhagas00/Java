@@ -23,6 +23,4 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 	
-	
-
 }
