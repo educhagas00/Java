@@ -14,27 +14,27 @@ public class Program {
 		Item carne = new Item(13, 1.50, "picanha");
 		
 		//addicionar item ao pedido
-		carrinho.add(carne);
-		carrinho.add(bebida);
 		carrinho.add(doce);
+		carrinho.add(bebida);
+		carrinho.add(carne);
 		
-		//mostrando a lista de precos
+		Fatura fatura = new Fatura("Dudu", "13384934343");
+		fatura.setItens(carrinho);
+		
+		//mostrando a lista de itens
 		for (Item item : carrinho) {
 			System.out.println("itens: " + item.getNome());
 			System.out.println("quantidade: " + item.getQuantidade());
 			System.out.println("preco unitario: " + item.getPreco_unitario());
 			System.out.println("");
 		}
+		System.out.println("nome: " + fatura.getNome());
+		System.out.println("cpf: " + fatura.getCpf());
 		
-		//criar fatura
+		//somando total
+		double precoTotal = fatura.obtemPreco();
 		
+		System.out.println("pague: " + precoTotal);	
 		
-
-		//mostrar fatura
-		//double preco = 0;
-		
-		//for (Item item : carrinho) {
-			//preco += fatura.obtemPreco(); 
-		//}
 	}
 }
