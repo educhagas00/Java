@@ -6,8 +6,6 @@ public class Aluno extends Pessoa {
 
 	public Aluno(String nome, String cpf) {
 		super(nome, cpf);
-		this.nome = nome;
-		this.cpf = cpf;
 	}
 	
 	public void addNota(double nota) {
@@ -24,7 +22,6 @@ public class Aluno extends Pessoa {
 		return notaFinal/2;
 	}
 
-	
 	public static void main(String[] args) {
 		
 		Aluno dudu = new Aluno("Dudu", "123.453.153-77");
