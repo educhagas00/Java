@@ -47,11 +47,11 @@ public class Product {
 		this.quantity -= quantity;
 	}
 	
-	
+	// o objeto.toString quando chamado, ira printar exatamente da forma identada que for posto aqui
 	public String toString() {
 		return name
 			+ ", $ "
-			+ String.format("%.2f", price) 
+			+ String.format("%.2f", price)  // definir o numero de casas decimais
 			+ ", "
 			+ quantity
 			+" units, Total: $ "
