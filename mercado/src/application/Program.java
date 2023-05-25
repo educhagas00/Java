@@ -17,17 +17,17 @@ public class Program {
 		
 		System.out.println("Name: ");
 		
-		product.name = sc.nextLine();
+		product.setName(sc.nextLine());
 		 
 		System.out.println("Price: ");
 		 
-		product.price = sc.nextDouble(); 
+		product.setPrice(sc.nextDouble());
 		
 		System.out.println("Quantity in Stock: ");
 		
-		product.quantity = sc.nextInt();
+		product.setQuantity(sc.nextInt());
 		
-		System.out.println(product.name + ", " + product.price + ", " + product.quantity);
+		System.out.println(product.getName() + ", " + product.getPrice() + ", " + product.getQuantity());
 		
 		sc.close();
 	}
