@@ -29,7 +29,7 @@ public class Program {
 		
 		System.out.println("Enter the number of products to be added in stock: ");
 		int quantity = sc.nextInt();
-		product.addProducts(quantity); //objeto . metodo da classe product (variavel) ;
+		product.addProducts(quantity); //objeto . metodo da classe product (variavel) ; .
 		
 		System.out.println("Updated: " + product);
 		System.out.println("");
