@@ -47,6 +47,7 @@ public class Fatura {
 			precoFinal += item.getPreco_unitario() * item.getQuantidade();
 		}
 		
+		
 	return precoFinal; 
 	}
 }
