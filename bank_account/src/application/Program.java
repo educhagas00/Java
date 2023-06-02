@@ -14,7 +14,7 @@ public class Program {
 		
 		System.out.println("Enter account holder: ");
 		String name = sc.nextLine();
-		
+
 		System.out.println("Enter account number: ");
 		int number = sc.nextInt();
 		
