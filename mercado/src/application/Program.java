@@ -10,17 +10,17 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
-		
 		System.out.println("Enter product data: ");
 		System.out.println("Name: ");
-		product.setName(sc.nextLine());
+		String name = sc.nextLine();
 		 
 		System.out.println("Price: ");
-		product.setPrice(sc.nextDouble());
+		double price = sc.nextDouble();
 		
 		System.out.println("Quantity in Stock: ");
-		product.setQuantity(sc.nextInt());
+		int quantity = sc.nextInt();
+		
+		Product product = new Product(name, price, quantity);
 		
 		System.out.println("");
 		
@@ -28,7 +28,7 @@ public class Program {
 		System.out.println("");
 		
 		System.out.println("Enter the number of products to be added in stock: ");
-		int quantity = sc.nextInt();
+		int number = sc.nextInt();
 		product.addProducts(quantity); //objeto . metodo da classe product (variavel) ; .
 		
 		System.out.println("Updated: " + product);
@@ -36,7 +36,7 @@ public class Program {
 		
 		System.out.println("Enter the number of products to be removed from stock: ");
 		quantity = sc.nextInt();
-		product.removeProducts(quantity);
+		product.removeProducts(number);
 		
 		System.out.println("Updated: " + product);
 		System.out.println("");
